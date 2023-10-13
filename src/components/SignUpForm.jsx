@@ -24,6 +24,10 @@ export default function SignUpForm({ setToken }) {
     } catch (error) {
       setError(error.message)
     }
+
+    setUsername("");
+    setPassword("");
+    setError("Thank you for submitting! Now please authenticate.");
   }
 
   return (
