@@ -8,7 +8,7 @@ export default function SignUpForm({ setToken }) {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (username.length < 5 && username.length > 1 || password.length < 8 && password.length > 1) {
+    if (username.length < 5 || username.length === 0 || password.length === 0 || password.length < 8) {
       setError("Username must be at least 5 characters and password must be at least 8 characters");
       return;
     }

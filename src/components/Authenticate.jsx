@@ -7,6 +7,12 @@ export default function Authenticate({ token }) {
 
 
   async function handleClick() {
+    
+    if(!token){
+      setError(`Please submit a username & password`);
+      return;
+    }
+
     try {
       const authenticate = await fetch("https://fsa-jwt-practice.herokuapp.com/authenticate", {
         method: "GET",
