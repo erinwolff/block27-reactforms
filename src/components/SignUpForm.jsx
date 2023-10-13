@@ -4,12 +4,13 @@ export default function SignUpForm({setToken}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-
+  
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       const signup = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
         method: "POST",
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ username, password }),
       });
       const response = await signup.json();
