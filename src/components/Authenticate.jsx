@@ -5,6 +5,9 @@ export default function Authenticate({ token }) {
   const [successMessage, setSuccessMessage] = useState(null);
   const [error, setError] = useState(null);
 
+  function refreshPage () {
+    window.location.reload();
+  }
 
   async function handleClick() {
     
@@ -33,6 +36,9 @@ export default function Authenticate({ token }) {
       {successMessage && <p>{successMessage}</p>}
       {error && <p>{error}</p>}
       <button onClick={handleClick}>Authenticate Token!</button>
+      <br/>
+      <br/>
+      <button onClick={refreshPage}>Refresh page</button>
     </>
   );
 }

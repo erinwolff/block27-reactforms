@@ -42,10 +42,7 @@ export default function SignUpForm({ setToken }) {
         <br />
         <h6>*Password must contain at least 8 characters.</h6>
         <button>Submit</button>
-        <br />
-        <br />
-        <button onClick={() => (setUsername(""), setPassword(""))}>Clear Form</button>
-
+        <br/>
       </form>
 
     </>
