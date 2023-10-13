@@ -36,12 +36,12 @@ export default function SignUpForm({ setToken }) {
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
-          Username: <input value={username} onChange={(e) => { setUsername(e.target.value); }} />
+          Username: <input value={username} autocomplete="off" onChange={(e) => { setUsername(e.target.value); }} />
         </label>
         <br />
         <h6>*Username must contain at least 5 characters.</h6>
         <label>
-          Password: <input value={password} type="password" onChange={(e) => { setPassword(e.target.value); }} />
+          Password: <input value={password} type="password" autocomplete="off" onChange={(e) => { setPassword(e.target.value); }} />
         </label>
         <br />
         <h6>*Password must contain at least 8 characters.</h6>
