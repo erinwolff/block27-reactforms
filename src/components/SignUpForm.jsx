@@ -14,7 +14,6 @@ export default function SignUpForm({setToken}) {
         body: JSON.stringify({ username, password }),
       });
       const response = await signup.json();
-      console.log(response);
       setToken(response.token);
     } catch (error) {
       setError(error.message)
